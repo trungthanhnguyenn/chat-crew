@@ -1,0 +1,113 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# Dependencies
+node_modules/
+jspm_packages/
+
+# Build outputs
+dist/
+dist-ssr/
+build/
+out/
+*.local
+
+# Environment variables - CRITICAL FOR SECURITY
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+
+# API Keys and Secrets
+*.key
+*.pem
+*.p12
+*.pfx
+config/secrets.*
+secrets.*
+
+# Package manager files (optional - uncomment if you want to exclude them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Cache directories
+.npm
+.eslintcache
+.stylelintcache
+.parcel-cache
+.cache/
+.next/
+.nuxt/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Temporary folders
+tmp/
+temp/
+
+# Storybook build outputs
+storybook-static/
+
+# Playwright
+test-results/
+playwright-report/
+playwright/.cache/
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
+.tscache/
+
+# Optional REPL history
+.node_repl_history
+
+# Miscellaneous
+*.tgz
+*.tar.gz
+*.md

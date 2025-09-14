@@ -1,0 +1,371 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* AI Chatbot Platform Design System - Professional and Modern */
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 225 15% 15%;
+
+    /* Card and Surface Colors */
+    --card: 0 0% 100%;
+    --card-foreground: 225 15% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 225 15% 15%;
+
+    /* Primary Brand - Deep Blue */
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 217 91% 70%;
+
+    /* Secondary - Vibrant Purple for AI elements */
+    --secondary: 262 83% 58%;
+    --secondary-foreground: 0 0% 100%;
+
+    /* Muted and Neutral Tones */
+    --muted: 220 13% 95%;
+    --muted-foreground: 225 15% 45%;
+
+    /* Accent - Emerald for success states */
+    --accent: 142 76% 36%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Destructive - Professional red */
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Borders and Inputs */
+    --border: 220 13% 87%;
+    --input: 220 13% 87%;
+    --ring: 217 91% 60%;
+
+    /* Design System Extensions */
+    --radius: 0.75rem;
+
+    /* AI Platform Specific Colors */
+    --ai-agent-1: 262 83% 58%; /* Purple for Agent 1 */
+    --ai-agent-2: 142 76% 36%; /* Emerald for Agent 2 */
+    --ai-agent-3: 25 95% 53%;  /* Orange for Agent 3 */
+    
+    /* Gradient Definitions */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 60%) 0%, hsl(262 83% 58%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 100%) 0%, hsl(220 13% 98%) 100%);
+    --gradient-ai: linear-gradient(135deg, hsl(262 83% 58%) 0%, hsl(217 91% 60%) 100%);
+    
+    /* Shadows for depth */
+    --shadow-sm: 0 1px 2px 0 hsl(0 0% 0% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(0 0% 0% / 0.1), 0 2px 4px -2px hsl(0 0% 0% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(0 0% 0% / 0.1), 0 4px 6px -4px hsl(0 0% 0% / 0.1);
+    --shadow-glow: 0 0 20px hsl(217 91% 60% / 0.3);
+    
+    /* Animation Timings */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-smooth: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Dark Mode Core Colors */
+    --background: 225 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 225 15% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 225 15% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary Brand - Brighter blue for dark mode */
+    --primary: 217 91% 65%;
+    --primary-foreground: 225 15% 8%;
+    --primary-glow: 217 91% 75%;
+
+    /* Secondary - Vibrant Purple maintained */
+    --secondary: 262 83% 65%;
+    --secondary-foreground: 225 15% 8%;
+
+    /* Muted and Neutral for dark */
+    --muted: 225 15% 15%;
+    --muted-foreground: 225 15% 65%;
+
+    /* Accent - Brighter emerald for dark mode */
+    --accent: 142 76% 45%;
+    --accent-foreground: 225 15% 8%;
+
+    /* Destructive - Softer red for dark mode */
+    --destructive: 0 72% 60%;
+    --destructive-foreground: 0 0% 95%;
+
+    /* Borders and Inputs for dark */
+    --border: 225 15% 20%;
+    --input: 225 15% 20%;
+    --ring: 217 91% 65%;
+
+    /* AI Platform Specific Colors - Dark Mode */
+    --ai-agent-1: 262 83% 65%; /* Purple for Agent 1 */
+    --ai-agent-2: 142 76% 45%; /* Emerald for Agent 2 */
+    --ai-agent-3: 25 95% 60%;  /* Orange for Agent 3 */
+    
+    /* Dark Mode Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 65%) 0%, hsl(262 83% 65%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(225 15% 10%) 0%, hsl(225 15% 12%) 100%);
+    --gradient-ai: linear-gradient(135deg, hsl(262 83% 65%) 0%, hsl(217 91% 65%) 100%);
+    
+    /* Sidebar dark mode */
+    --sidebar-background: 225 15% 10%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 217 91% 65%;
+    --sidebar-primary-foreground: 225 15% 8%;
+    --sidebar-accent: 225 15% 15%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 225 15% 20%;
+    --sidebar-ring: 217 91% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Hero Section Components */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .card-gradient {
+    background: var(--gradient-card);
+  }
+  
+  .ai-gradient {
+    background: var(--gradient-ai);
+  }
+
+  /* Animation Classes */
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite alternate;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+
+  /* Interactive Elements */
+  .chat-bubble-user {
+    @apply bg-primary text-primary-foreground rounded-2xl rounded-br-md px-4 py-3 max-w-xs ml-auto;
+  }
+  
+  .chat-bubble-agent {
+    @apply bg-secondary text-secondary-foreground rounded-2xl rounded-bl-md px-4 py-3 max-w-xs mr-auto;
+  }
+  
+  .feature-card {
+    @apply bg-card border border-border rounded-xl p-6 transition-all duration-300 hover:shadow-lg hover:border-primary/20;
+  }
+  
+  .cta-button-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+  
+  .cta-button-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 border-2 border-secondary transition-all duration-300;
+  }
+}
+
+@layer utilities {
+  /* Custom Shadow Utilities */
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .text-gradient {
+    background: var(--gradient-ai);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Agent Color Utilities */
+  .agent-1-color {
+    color: hsl(var(--ai-agent-1));
+  }
+  
+  .agent-2-color {
+    color: hsl(var(--ai-agent-2));
+  }
+  
+  .agent-3-color {
+    color: hsl(var(--ai-agent-3));
+  }
+}
+
+/* Keyframe Animations */
+@keyframes glow {
+  from {
+    box-shadow: 0 0 20px hsl(217 91% 60% / 0.3);
+  }
+  to {
+    box-shadow: 0 0 30px hsl(217 91% 60% / 0.6);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes typing {
+  0%, 20% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+  80%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Chat Demo Animation Styles - Production Requirements */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Chat Demo Specific Styles */
+.message-enter {
+  animation: slideInUp 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
+.typing-indicator {
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.agent-avatar {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.agent-avatar:hover {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Agent Message Styles per Specification */
+.user-message {
+  background: linear-gradient(135deg, #3B82F6, #1D4ED8);
+  color: white;
+}
+
+.creative-agent {
+  background: linear-gradient(135deg, #8B5CF6, #6D28D9);
+  border-left: 4px solid #8B5CF6;
+}
+
+.business-agent {  
+  background: linear-gradient(135deg, #10B981, #047857);
+  border-left: 4px solid #10B981;
+}
+
+.tech-agent {
+  background: linear-gradient(135deg, #F97316, #EA580C);  
+  border-left: 4px solid #F97316;
+}
+
+/* Animation Classes */
+.animate-slide-up {
+  animation: slide-up 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
+
+.animate-fade-in {
+  animation: fade-in 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  animation-fill-mode: both;
+}
